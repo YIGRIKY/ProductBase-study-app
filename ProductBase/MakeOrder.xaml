@@ -1,0 +1,28 @@
+﻿<Window x:Class="ProductBase.MakeOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductBase"
+        mc:Ignorable="d"
+        Title="MakeOrder" Height="450" Width="800">
+    <Canvas>
+        <Label Content="Тип продукта:" Canvas.Left="82" Canvas.Top="10"></Label>
+        <ComboBox Name="comboBox" Canvas.Left="173" Canvas.Top="14" Width="115" SelectionChanged="comboBox_SelectionChanged" >
+        </ComboBox>
+        <Button Content="Назад" Canvas.Left="745" Canvas.Top="10" Click="Button_Click"></Button>
+        <TextBox x:Name="ProductName" Width="115" Canvas.Left="314" Canvas.Top="14" Height="22" TextChanged="TextBox_TextChanged"/>
+        <DataGrid CanUserAddRows="False" Name="dataGrid" Height="349" Width="792" Canvas.Top="70">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="order" Click="order_click" >Заказать</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Name="ElementsCount" Canvas.Left="723" Canvas.Top="10" Height="26"/>
+    </Canvas>
+</Window>

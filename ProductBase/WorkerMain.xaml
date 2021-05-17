@@ -1,0 +1,32 @@
+﻿<Window x:Class="ProductBase.WorkerMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductBase"
+        mc:Ignorable="d"
+        Title="WorkerMain" Height="450" Width="800">
+    <Canvas>
+        <Ellipse Width="50" Height="50">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="images.jpg"></ImageBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Button Content="Информация о продуктах" Canvas.Left="228" Canvas.Top="10" Click="Button_Click_1"/>
+        <Button Content="Выйти" Canvas.Left="731" Canvas.Top="10" Click="Button_Click"/>
+        <Label Content="Следующая поставка" Canvas.Left="211" Canvas.Top="30" FontSize="36"/>
+        <DataGrid CanUserAddRows="False" Name="dataGridReady" Height="161" Width="792" Canvas.Top="86">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="order" Click="ConfirmDeliver_Click" >Принять товар</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid CanUserAddRows="False" Name="dataGrid" Height="167" Width="792" Canvas.Top="252">
+        </DataGrid>
+    </Canvas>
+</Window>

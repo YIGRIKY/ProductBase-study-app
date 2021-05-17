@@ -1,0 +1,17 @@
+﻿<Window x:Class="ProductBase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductBase"
+        mc:Ignorable="d"
+        Title="Вход" Height="450" Width="800">
+    <Canvas>
+        <Label Content="Вход" FontSize="48" Canvas.Left="318" Canvas.Top="34" ></Label>
+        <TextBox HorizontalAlignment="Center" Name="login" Width="200" VerticalAlignment="Center" Height="40" Canvas.Left="282" Canvas.Top="139" FontSize="22"/>
+        <PasswordBox HorizontalAlignment="Center" VerticalAlignment="Center" Name="password" Width="200" Height="40" Canvas.Left="282" Canvas.Top="205" FontSize="22"/>
+        <Button Width="200" Height="40" Canvas.Left="282" Canvas.Top="273" Content="Войти" FontSize="24" Click="Button_Click_2"/>
+        <Button Width="200" Height="40" Canvas.Left="582" Canvas.Top="369" Content="О нас" FontSize="24" Click="Button_Click"/>
+        <Button Width="334" Height="40" Canvas.Left="10" Canvas.Top="369" Content="Как я могу узнать пароль?" FontSize="24" Click="Button_Click_1"/>
+    </Canvas>
+</Window>
